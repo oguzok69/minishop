@@ -73,7 +73,7 @@ export default function Catalog({ onAddToCart }) {
         }
 
         if (urlPage !== page) setPage(urlPage);
-    }, [searchParams]);
+    }, [searchParams, debouncedQuery, page]);
 
     const totalPages = useMemo(() => Math.max(1, Math.ceil(total / LIMIT)), [total]);
     return (

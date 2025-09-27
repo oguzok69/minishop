@@ -23,6 +23,8 @@ export default function Product({ onAddToCart }) {
     }, [id]);
     return (
         <div id="productPage">
+            {error && <p>{error}</p>}
+            {loading && <p>загрузка...</p>}
             <div id="productInfo">
                 <h3>{item.title}</h3>
                 <img src={item.images} alt={item.title} id="productImage" />
