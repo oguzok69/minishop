@@ -54,4 +54,5 @@ jobs:
           password: ${{ secrets.SERVER_PASS }}
           script: |
             docker restart mini-shop || true
+        
         # Перезапускаем контейнер, чтобы Nginx перечитал файлы (обычно даже не обязательно, но так надёжнее)
