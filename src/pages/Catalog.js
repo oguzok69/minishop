@@ -73,6 +73,7 @@ export default function Catalog({ onAddToCart }) {
         }
 
         if (urlPage !== page) setPage(urlPage);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchParams]);
 
     const totalPages = useMemo(() => Math.max(1, Math.ceil(total / LIMIT)), [total]);
